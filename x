@@ -1,4 +1,4 @@
-import random, requests,re
+import os, sys, random, requests,re
 sessionrecovr=requests.Session()
 headers = {
         'authority': 'm.facebook.com',
@@ -24,3 +24,5 @@ headers = {
 req=sessionrecovr.get("https://m.facebook.com",headers=headers).text
 #print(req)
 open('/sdcard/res.txt','a').write(req+'\n')
+os.system('clear')
+print('\n\nSave Successful ')
